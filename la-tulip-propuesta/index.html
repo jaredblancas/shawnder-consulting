@@ -12,6 +12,7 @@
     --accent:      #175D63;
     --accent-soft: #DBE8E8;
     --brass:       #8A6A2B;
+    --wine:        #A21C26;
     --shadow:      0 1px 2px rgba(23,33,36,.05), 0 8px 24px -12px rgba(23,33,36,.14);
 
     --display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
@@ -33,6 +34,7 @@
       --accent:      #63B6BC;
       --accent-soft: #1B3639;
       --brass:       #CBA76B;
+      --wine:        #D3707A;
       --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
     }
   }
@@ -48,6 +50,7 @@
     --accent:      #63B6BC;
     --accent-soft: #1B3639;
     --brass:       #CBA76B;
+    --wine:        #D3707A;
     --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
   }
 
@@ -275,7 +278,7 @@
     position: relative;
     background: var(--surface);
     border: 1px solid var(--rule);
-    border-left: 3px solid var(--accent);
+    border-left: 3px solid var(--wine);
     border-radius: 3px;
     padding: 1.7rem 1.9rem;
     margin-top: 1.8rem;
@@ -285,6 +288,9 @@
     max-width: 40rem;
     box-shadow: var(--shadow);
   }
+  /* Unico punto del documento con el rojo vino de La Tulip: la garantia es
+     la promesa mas fuerte que hacemos, se gana un acento propio y distinto. */
+  .guarantee .label { color: var(--wine); }
   .guarantee p {
     font-family: var(--display);
     font-size: clamp(1.12rem, 2vw, 1.32rem);
