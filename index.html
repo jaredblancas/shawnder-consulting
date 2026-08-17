@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shawnder Consulting</title>
+<style>
+  /* Placeholder deliberadamente sencillo, a la espera del proyecto de portada
+     definitivo (persona programando, la sombra se mueve con ella). */
+  :root {
+    --ground: #0E1113;
+    --ink: #EDEFEF;
+    --ink-soft: #9AA0A3;
+    --accent: #E8A24B;
+    --rule: #22262A;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.4rem;
+    text-align: center;
+  }
+  .mark {
+    font-size: clamp(2.4rem, 9vw, 4.2rem);
+    font-weight: 600;
+    letter-spacing: -.02em;
+    color: var(--ink);
+    text-shadow: 4px 4px 0 rgba(232,162,75,.16), 8px 8px 0 var(--rule);
+  }
+  .mark .dot { color: var(--accent); text-shadow: none; }
+  .tag {
+    font-size: .78rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .note {
+    max-width: 26rem;
+    color: var(--ink-soft);
+    font-size: .98rem;
+    line-height: 1.6;
+    margin-top: .6rem;
+  }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s ease;
+  }
+  a:hover, a:focus-visible { border-color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  @media (prefers-reduced-motion: no-preference) {
+    .mark { animation: rise .8s cubic-bezier(.2,.7,.3,1) both; }
+    .tag  { animation: rise .8s cubic-bezier(.2,.7,.3,1) .1s both; }
+    .note { animation: rise .8s cubic-bezier(.2,.7,.3,1) .2s both; }
+  }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+  <main>
+    <span class="tag">Consultoría digital</span>
+    <div class="mark">Shawnder<span class="dot">.</span></div>
+    <p class="note">Estamos construyendo esta página. Mientras tanto, escríbenos a
+      <a href="mailto:jared.blancas0309@gmail.com">jared.blancas0309@gmail.com</a>.</p>
+  </main>
+</body>
+</html>
