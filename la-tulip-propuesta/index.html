@@ -1,19 +1,22 @@
 <title>Diagnóstico de La Tulip</title>
 <style>
-  /* ---------- Paleta: peltre y porcelana, tomada de su propio catálogo ---------- */
+  /* ---------- Paleta ----------
+     Base tomada literalmente de la tienda de La Tulip: fondo blanco, titulares
+     y navegación en negro, cuerpo en #414141 y sus franjas en #F4F4F4.
+     Los acentos son nuestros, en azul petróleo.
+     Su granate #A21C26 aparece solo como toque puntual. */
   :root {
-    --ground:      #F3F6F6;
+    --ground:      #FFFFFF;
     --surface:     #FFFFFF;
-    --surface-alt: #E7ECEC;
-    --ink:         #172124;
-    --ink-soft:    #4B5A5D;
-    --ink-faint:   #7B8A8C;
-    --rule:        #D5DEDE;
+    --surface-alt: #F4F4F4;
+    --ink:         #000000;
+    --ink-soft:    #414141;
+    --ink-faint:   #757575;
+    --rule:        #E2E2E2;
     --accent:      #175D63;
-    --accent-soft: #DBE8E8;
-    --brass:       #8A6A2B;
+    --accent-soft: #E6EEEE;
     --wine:        #A21C26;
-    --shadow:      0 1px 2px rgba(23,33,36,.05), 0 8px 24px -12px rgba(23,33,36,.14);
+    --shadow:      0 1px 2px rgba(0,0,0,.04), 0 8px 24px -12px rgba(0,0,0,.16);
 
     --display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", "URW Palladio L", Georgia, serif;
     --body: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
@@ -24,34 +27,32 @@
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground:      #10171A;
-      --surface:     #182124;
-      --surface-alt: #1F2B2E;
-      --ink:         #E7EDEC;
-      --ink-soft:    #A8B7B8;
-      --ink-faint:   #7E8E90;
-      --rule:        #2B393B;
-      --accent:      #63B6BC;
-      --accent-soft: #1B3639;
-      --brass:       #CBA76B;
-      --wine:        #D3707A;
-      --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+      --ground:      #0E0E0E;
+      --surface:     #161616;
+      --surface-alt: #1D1D1D;
+      --ink:         #FFFFFF;
+      --ink-soft:    #C2C2C2;
+      --ink-faint:   #8A8A8A;
+      --rule:        #2B2B2B;
+      --accent:      #62B2B9;
+      --accent-soft: #17302F;
+      --wine:        #E2757E;
+      --shadow:      0 1px 2px rgba(0,0,0,.5), 0 8px 24px -12px rgba(0,0,0,.7);
     }
   }
 
   :root[data-theme="dark"] {
-    --ground:      #10171A;
-    --surface:     #182124;
-    --surface-alt: #1F2B2E;
-    --ink:         #E7EDEC;
-    --ink-soft:    #A8B7B8;
-    --ink-faint:   #7E8E90;
-    --rule:        #2B393B;
-    --accent:      #63B6BC;
-    --accent-soft: #1B3639;
-    --brass:       #CBA76B;
-    --wine:        #D3707A;
-    --shadow:      0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+    --ground:      #0E0E0E;
+    --surface:     #161616;
+    --surface-alt: #1D1D1D;
+    --ink:         #FFFFFF;
+    --ink-soft:    #C2C2C2;
+    --ink-faint:   #8A8A8A;
+    --rule:        #2B2B2B;
+    --accent:      #62B2B9;
+    --accent-soft: #17302F;
+    --wine:        #E2757E;
+    --shadow:      0 1px 2px rgba(0,0,0,.5), 0 8px 24px -12px rgba(0,0,0,.7);
   }
 
   /* ---------- Base ---------- */
@@ -155,7 +156,8 @@
     letter-spacing: -.02em;
     color: var(--ink);
   }
-  .fig.hot .n { color: var(--brass); }
+  /* Las cifras problemáticas no cambian de color: se marcan con un filete
+     granate permanente bajo la tarjeta. Informa sin gritar. */
   .fig .t { font-size: .93rem; color: var(--ink-soft); line-height: 1.5; }
 
   .verdict {
@@ -232,7 +234,7 @@
 
   /* ---------- Compromisos ---------- */
   .pledge {
-    background: var(--accent-soft);
+    background: var(--surface-alt);
     border-radius: 3px;
     padding: 1.7rem 1.6rem;
     margin-top: 1.8rem;
@@ -350,7 +352,7 @@
   .progress-fill {
     height: 100%;
     width: 0%;
-    background: linear-gradient(90deg, var(--accent), var(--brass));
+    background: linear-gradient(90deg, var(--accent), var(--wine));
     transition: width .12s linear;
   }
 
@@ -406,7 +408,7 @@
     transform-origin: left;
     transition: transform .45s cubic-bezier(.2,.7,.3,1);
   }
-  .fig.hot::after { background: var(--brass); }
+  .fig.hot::after { background: var(--wine); transform: scaleX(1); }
   .fig:hover::after { transform: scaleX(1); }
 
   .guarantee { transition: box-shadow .3s ease, transform .3s ease; }
